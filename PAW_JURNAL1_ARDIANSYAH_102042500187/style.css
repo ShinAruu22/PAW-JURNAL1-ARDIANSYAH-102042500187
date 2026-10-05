@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17122f;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(135deg, rgba(23, 18, 47, 0.85), rgba(35, 26, 84, 0.8)), url('bg-campus.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    transform: scale(1.02);
+}
+
+.container, .id-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+    object-fit: contain;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    color: #1b1830;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b6882;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: #fdecee;
+    color: #c62f3b;
+}
+
+.alert-success {
+    background-color: #e2f6ea;
+    color: #0b7a4b;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1b1830;
+}
+
+.required {
+    color: #c62f3b;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #d9d6e6;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #5b3fe0;
+    box-shadow: 0 0 0 3px rgba(91, 63, 224, 0.1);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.error {
+    color: #c62f3b;
+    font-size: 12.5px;
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+button, .btn-lihat-data, .btn-kembali {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+button {
+    background-color: #5b3fe0;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #3f27b5;
+}
+
+.btn-lihat-data {
+    background-color: transparent;
+    color: #5b3fe0;
+    border: 1.5px solid #d9d6e6;
+}
+
+.btn-lihat-data:hover {
+    background-color: #eeeaff;
+    border-color: #5b3fe0;
+}
+
+.btn-kembali {
+    background-color: #5b3fe0;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.btn-kembali:hover {
+    background-color: #3f27b5;
+}
+
+/* ID Card Styles */
+.id-card-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.id-card-header p {
+    text-align: center;
+    color: #6b6882;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.id-card-body {
+    border: 1px solid #d9d6e6;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #faf9ff;
+}
+
+.id-card-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.id-card-label {
+    font-size: 13px;
+    color: #6b6882;
+    font-weight: 600;
+}
+
+.id-card-value {
+    font-size: 15px;
+    color: #1b1830;
+    font-weight: 500;
+}
+
+.id-card-divider {
+    border: none;
+    border-top: 1px dashed #d9d6e6;
+    margin: 15px 0;
+}
+
+.id-card-badge {
+    background-color: #e2f6ea;
+    color: #0b7a4b;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.id-card-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #8b889f;
+}
